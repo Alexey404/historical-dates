@@ -1,7 +1,7 @@
 import { FC, useMemo, useState } from "react";
 import { HistoticalDataType } from "../../constants/histoticalData";
 import { useDevice } from "../../hooks/useDevice";
-import { AnimatedNumber } from "../AnimatedNumber";
+import { AnimatedNumber } from "../AnimatedNumber/AnimatedNumber";
 import { Circle } from "../Circle/Circle";
 import { PageIndicator } from "../PageIndicator/PageIndicator";
 import { PageNavigator } from "../PageNavigator/PageNavigator";
