@@ -2,6 +2,7 @@ import React from "react";
 import { HistoricalDates } from "./components/HistoricalDates/HistoricalDates";
 import { histoticalData } from "./constants/histoticalData";
 import styles from "./app.module.scss";
+import { SwiperWrapper } from "./components/SwiperWrapper/SwiperWrapper";
 
 export const App: React.FC = () => {
   return (

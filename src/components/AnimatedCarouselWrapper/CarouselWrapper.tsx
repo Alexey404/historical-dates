@@ -6,6 +6,7 @@ import { flushSync } from "react-dom";
 
 import styles from "./carousel-wrapper.module.scss";
 import { HistoticalDataType } from "../../types/HistoticalDataTypes";
+import { SwiperWrapper } from "../SwiperWrapper/SwiperWrapper";
 
 type CarouselWrapperProps = {
   contentItems: HistoticalDataType[];
@@ -71,6 +72,7 @@ export const CarouselWrapper: FC<CarouselWrapperProps> = ({
             {currentLabel}
           </span>
           <Carousel items={currentContent} />
+          <SwiperWrapper items={currentContent} />
         </>
       )}
     </div>

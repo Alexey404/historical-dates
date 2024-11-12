@@ -7,6 +7,7 @@ import { PageNavigator } from "../PageNavigator/PageNavigator";
 import { CarouselWrapper } from "../AnimatedCarouselWrapper/CarouselWrapper";
 import { HistoticalDataType } from "../../types/HistoticalDataTypes";
 import styles from "./historical-dates.module.scss";
+import { SwiperWrapper } from "../SwiperWrapper/SwiperWrapper";
 
 interface HistoricalDatesProps {
   contentItems: HistoticalDataType[];
@@ -68,6 +69,7 @@ export const HistoricalDates: FC<HistoricalDatesProps> = ({ contentItems }) => {
         </div>
         <div className={styles["content__bottom"]}>
           <CarouselWrapper contentItems={contentItems} itemIndex={itemIndex} />
+
           <div className={styles["content__navigator-container"]}>
             <div className={styles["content__navigator-mobile"]}>
               <PageNavigator
