@@ -1,11 +1,11 @@
 import { FC, useMemo, useState } from "react";
-import { HistoticalDataType } from "../../constants/histoticalData";
 import { useDevice } from "../../hooks/useDevice";
 import { AnimatedNumber } from "../AnimatedNumber/AnimatedNumber";
 import { Circle } from "../Circle/Circle";
 import { PageIndicator } from "../PageIndicator/PageIndicator";
 import { PageNavigator } from "../PageNavigator/PageNavigator";
 import { CarouselWrapper } from "../AnimatedCarouselWrapper/CarouselWrapper";
+import { HistoticalDataType } from "../../types/HistoticalDataTypes";
 import styles from "./historical-dates.module.scss";
 
 interface HistoricalDatesProps {

@@ -4,8 +4,8 @@ import { useDidUpdate } from "../../hooks/useDidUpdate";
 import { getShortestRotation } from "../../utils/getShortestRotation";
 import { sortByActiveIndex } from "../../utils/sortByActiveIndex";
 import { Points } from "../Points/Points";
-import { HistoticalDataType } from "../../constants/histoticalData";
 import styles from "./circle.module.scss";
+import { HistoticalDataType } from "../../types/HistoticalDataTypes";
 
 type CircleProps = {
   points: HistoticalDataType[];

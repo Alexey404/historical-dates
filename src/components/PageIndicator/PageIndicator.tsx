@@ -1,7 +1,8 @@
 import React from "react";
-import { HistoticalDataType } from "../../constants/histoticalData";
-import styles from "./page-indicator.module.scss";
+import { HistoticalDataType } from "../../types/HistoticalDataTypes";
 import classNames from "classnames";
+import styles from "./page-indicator.module.scss";
+
 
 interface PageIndicatorProps {
   currentPage: number;

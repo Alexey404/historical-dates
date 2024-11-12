@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { FC, useEffect, useRef, useState } from "react";
-import { ContentType } from "../../constants/histoticalData";
 import { ArrowButton } from "../ArrowButton/ArrowButton";
+import { ContentType } from "../../types/HistoticalDataTypes";
 import styles from "./carousel.module.scss";
 
 type CarouselProps = {

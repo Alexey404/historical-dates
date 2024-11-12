@@ -1,11 +1,11 @@
 import gsap from "gsap";
 import { FC, useRef, useState } from "react";
-import { HistoticalDataType } from "../../constants/histoticalData";
 import { useDidUpdate } from "../../hooks/useDidUpdate";
 import { Carousel } from "../Carousel/Carousel";
 import { flushSync } from "react-dom";
 
 import styles from "./carousel-wrapper.module.scss";
+import { HistoticalDataType } from "../../types/HistoticalDataTypes";
 
 type CarouselWrapperProps = {
   contentItems: HistoticalDataType[];

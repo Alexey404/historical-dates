@@ -1,8 +1,8 @@
 import gsap from "gsap";
 import { FC, memo, useLayoutEffect, useRef } from "react";
 import { useDidUpdate } from "../../hooks/useDidUpdate";
-import { HistoticalDataType } from "../../constants/histoticalData";
 import classNames from "classnames";
+import { HistoticalDataType } from "../../types/HistoticalDataTypes";
 import styles from "./point.module.scss";
 
 type PointsPropsType = {
