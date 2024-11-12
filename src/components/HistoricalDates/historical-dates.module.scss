@@ -1,0 +1,156 @@
+@use "../../styles/breakpoints.scss" as bp;
+@use "../../styles/colors.scss" as color;
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+
+  font-family: "PT Sans";
+
+  &__title-wrapper {
+    position: relative;
+    margin-top: 170px;
+
+    @include bp.respond-to(tablet) {
+      margin-top: 60px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 5px;
+      background-image: linear-gradient(
+        rgba(56, 119, 238, 1),
+        rgba(239, 93, 168, 1)
+      );
+
+      @include bp.respond-to(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    width: 353px;
+    margin-left: 80px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 67.2px;
+    color: rgba(66, 86, 122, 1);
+
+    @include bp.respond-to(tablet) {
+      margin-left: 20px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__interactive-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__date {
+    font-family: "PT Sans";
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    gap: 70px;
+    margin-top: 96px;
+    margin-bottom: 140px;
+
+    font-weight: 700;
+    font-size: 200px;
+
+    @include bp.respond-to(tablet) {
+      font-size: 56px;
+      margin-top: 56px;
+      gap: 10px;
+      padding: 0 20px;
+      justify-content: space-around;
+      margin-bottom: 0px;
+      height: auto;
+    }
+
+    &::before {
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      z-index: -1;
+      content: "";
+      background-color: rgba(66, 86, 122, 1);
+      opacity: 0.2;
+
+      @include bp.respond-to(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__from {
+    color: #5d5fef;
+    text-align: right;
+  }
+
+  &__to {
+    color: #ef5da8;
+  }
+
+  &__circle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    overflow: hidden;
+  }
+
+  &__navigator-desktop {
+    display: block;
+
+    @include bp.respond-to(tablet) {
+      display: none;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    padding: 40px 0;
+    padding-bottom: 90px;
+    margin-top: auto;
+
+    @include bp.respond-to(tablet) {
+      padding-bottom: 15px;
+      margin-top: 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__navigator-container {
+    position: relative;
+    display: none;
+
+    @include bp.respond-to(tablet) {
+      display: block;
+    }
+  }
+
+  &__navigator-mobile {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}

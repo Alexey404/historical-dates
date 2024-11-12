@@ -1,0 +1,54 @@
+@use "../../styles/breakpoints.scss" as bp;
+@use "../../styles/colors.scss" as color;
+
+.page-navigator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 120px;
+  height: 88px;
+  margin-left: 80px;
+  position: relative;
+  z-index: 1;
+  color: rgba(66, 86, 122, 1);
+
+  @include bp.respond-to(tablet) {
+    margin-left: 20px;
+    width: 58px;
+    height: 50px;
+  }
+
+  &__arrow-block {
+    display: flex;
+    justify-content: space-between;
+
+    @include bp.respond-to(tablet) {
+    }
+  }
+
+  &__left-arrow {
+    @include bp.respond-to(tablet) {
+      width: 25px;
+      height: 25px;
+
+      > svg {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+  &__right-arrow {
+    rotate: 180deg;
+
+    @include bp.respond-to(tablet) {
+      width: 25px;
+      height: 25px;
+
+      > svg {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}

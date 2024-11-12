@@ -1,0 +1,24 @@
+@use "../../styles/breakpoints.scss" as bp;
+@use "../../styles/colors.scss" as color;
+
+.circle-container {
+  width: 530px;
+  height: 530px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-60deg);
+
+  &__circle {
+    width: 530px;
+    height: 530px;
+    border-radius: 50%;
+    position: relative;
+    transform-origin: center center;
+    border: 1px solid rgba(66, 86, 122, 0.2);
+    box-sizing: border-box;
+    will-change: transform;
+    z-index: 2;
+  }
+}

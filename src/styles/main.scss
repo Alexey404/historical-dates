@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 1);
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../assets/fonts/PT_Sans/PTSans-Regular.ttf") format("truetype"),
+    url("../assets/fonts/PT_Sans/PTSans-Bold.ttf") format("truetype");
+}

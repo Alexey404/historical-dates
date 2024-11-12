@@ -1,0 +1,19 @@
+@use "../../styles/breakpoints.scss" as bp;
+@use "../../styles/colors.scss" as color;
+
+.carousel-wrapper {
+  margin: auto 0;
+
+  &__mobile-label {
+    font-family: "PT Sans";
+    font-weight: 700;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: rgba(66, 86, 122, 1);
+    display: none;
+
+    @include bp.respond-to(tablet) {
+      display: block;
+    }
+  }
+}

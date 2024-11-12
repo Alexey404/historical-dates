@@ -1,0 +1,20 @@
+.page-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+
+  &__item {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: none;
+    padding: 0;
+    opacity: 0.4;
+    background-color: rgba(66, 86, 122, 1);
+
+    &--active {
+      opacity: 1;
+    }
+  }
+}
