@@ -24,11 +24,13 @@ export const CarouselWrapper: FC<CarouselWrapperProps> = ({
   const [currentLabel, setCurrentLabel] = useState(
     contentItems[itemIndex].label
   );
+  const tweenRef = useRef<gsap.core.Tween | null>(null);
 
   useDidUpdate(() => {
     const tween = gsap.to(contentRef.current, {
-      opacity: 0,
       duration: 0.5,
+      opacity: 0,
+      y: 20,
       onComplete: () => {
         setCurrentContent(contentItems[itemIndex].content);
         setCurrentLabel(contentItems[itemIndex].label);
@@ -38,11 +40,14 @@ export const CarouselWrapper: FC<CarouselWrapperProps> = ({
           setAnimatedSlider(true);
         });
 
-        gsap.to(contentRef.current, {
-          opacity: 1,
+        const tween = gsap.to(contentRef.current, {
           duration: 0.5,
+          opacity: 1,
+          y: 0,
           onComplete: () => {},
         });
+
+        tweenRef.current = tween;
 
         flushSync(() => {
           setAnimatedSlider(false);
@@ -52,6 +57,9 @@ export const CarouselWrapper: FC<CarouselWrapperProps> = ({
 
     return () => {
       tween.kill();
+      if (tweenRef.current) {
+        tweenRef.current.kill();
+      }
     };
   }, [itemIndex]);
 
