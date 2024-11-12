@@ -10,7 +10,7 @@
   margin-left: 80px;
   position: relative;
   z-index: 1;
-  color: rgba(66, 86, 122, 1);
+  color: color.$primary;
 
   @include bp.respond-to(tablet) {
     margin-left: 20px;

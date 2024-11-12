@@ -9,7 +9,7 @@
     font-weight: 700;
     margin-left: 20px;
     margin-bottom: 20px;
-    color: rgba(66, 86, 122, 1);
+    color: color.$primary;
     display: none;
 
     @include bp.respond-to(tablet) {
