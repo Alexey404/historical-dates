@@ -19,5 +19,5 @@ export const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ value }) => {
     });
   }, [value]);
 
-  return <div>{displayValue}</div>;
+  return <>{displayValue}</>;
 };
