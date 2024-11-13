@@ -71,6 +71,8 @@ export const CarouselWrapper: FC<CarouselWrapperProps> = ({
           <span className={styles["carousel-wrapper__mobile-label"]}>
             {currentLabel}
           </span>
+          {/* Я сначала не заметил что нужно использовать Swiper, по этому написал
+          свой,но так требования использовать Swiper, использую его */}
           {/* <Carousel items={currentContent} /> */}
           <SwiperWrapper items={currentContent} />
         </>
