@@ -71,7 +71,7 @@ export const CarouselWrapper: FC<CarouselWrapperProps> = ({
           <span className={styles["carousel-wrapper__mobile-label"]}>
             {currentLabel}
           </span>
-          <Carousel items={currentContent} />
+          {/* <Carousel items={currentContent} /> */}
           <SwiperWrapper items={currentContent} />
         </>
       )}
