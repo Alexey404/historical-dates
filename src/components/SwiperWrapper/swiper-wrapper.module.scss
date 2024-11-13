@@ -83,4 +83,11 @@
       line-height: 20px;
     }
   }
+
+  &__container {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
 }
