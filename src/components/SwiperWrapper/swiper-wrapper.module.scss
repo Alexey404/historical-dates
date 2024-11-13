@@ -1,31 +1,28 @@
 @use "../../styles/breakpoints.scss" as bp;
 @use "../../styles/colors.scss" as color;
 
-.carousel {
-  display: flex;
-  align-items: center;
-  position: relative;
+.swiper {
+  margin: 0 70px;
+  overflow: hidden;
 
-  &__wrapper {
-    overflow: hidden;
-    margin: 0 70px;
-    box-sizing: border-box;
-    width: 100%;
-
-    @include bp.respond-to(tablet) {
-      margin: 0;
-    }
+  @include bp.respond-to(tablet) {
+    margin: 0px;
   }
 
-  &__items {
+  &__wrapper {
     display: flex;
-    flex-direction: row;
-    min-width: max-content;
-    gap: 80px;
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__slide {
+    max-width: 320px;
+    width: 320px;
+
+    flex-shrink: 0;
 
     @include bp.respond-to(tablet) {
-      padding: 20px;
-      gap: 25px;
+      max-width: 166px;
     }
   }
 
@@ -34,19 +31,10 @@
     flex-direction: column;
     gap: 15px;
 
-    max-width: 320px;
-    width: 320px;
-
     border-radius: 5px;
     text-align: center;
     user-select: none;
     cursor: grab;
-
-    flex-shrink: 0;
-
-    @include bp.respond-to(tablet) {
-      max-width: 166px;
-    }
   }
 
   &__next-item {
@@ -93,20 +81,6 @@
     @include bp.respond-to(tablet) {
       font-size: 14px;
       line-height: 20px;
-    }
-  }
-
-  &__separator {
-    width: calc(100% - 40px);
-    height: 1px;
-    margin: 0 auto;
-    padding: 0 20px;
-    background-color: rgba(199, 205, 217, 1);
-    box-sizing: border-box;
-    display: none;
-
-    @include bp.respond-to(tablet) {
-      display: block;
     }
   }
 }
